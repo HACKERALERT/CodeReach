@@ -23,7 +23,7 @@
             left:0;
             width:100vw;
             height:100vh;
-            background-image:url("https://bit.ly/3EApfDw");
+            background-image:url("https://i.imgur.com/O8x8Nki.jpg");
             background-size:cover;
             background-repeat:no-repeat;
             z-index:-1;
@@ -43,8 +43,19 @@
             margin:16px;
             box-sizing:border-box;
             position:relative;
+            animation:.5s taskAnim ease forwards;
+            animation-fill-mode:none;
             transform:scale(1);
             transition:transform .2s;
+        }
+        @keyframes taskAnim{
+            from{
+                transform:scale(0.5);
+                opacity:0;
+            }to{
+                transform:scale(1);
+                opacity:1;
+            }
         }
         .task:hover,#add:hover{
             transform:scale(1.01);
@@ -112,6 +123,11 @@
 </head>
 <body>
     <div id="background"></div>
+    <div id="add">
+        <input type="text" placeholder="Task name" autocomplete="off"><br>
+        <textarea placeholder="Task description" rows="3"></textarea><br>
+        <button>Add</button>
+    </div>
     <div id="tasks">
         <!-- 
         This is what a task will look like:
@@ -120,11 +136,6 @@
             <p class="task_desc">Task description</p>
             <button class="task_done">Done</button>
         </div> -->
-    </div>
-    <div id="add">
-        <input type="text" placeholder="Task name" autocomplete="off"><br>
-        <textarea placeholder="Task description" rows="3"></textarea><br>
-        <button>Add</button>
     </div>
     <script>
         "use strict";
@@ -154,7 +165,7 @@
             done.innerHTML = "Done";
             div.appendChild(done);
 
-            document.getElementById("tasks").appendChild(div);
+            document.getElementById("tasks").insertBefore(div,document.getElementById("tasks").firstChild);
         }
 
         document.querySelector("#add button").onclick = ()=>{
@@ -166,7 +177,7 @@
             addTask(taskName,taskDesc);
 
             // Add the task to the array
-            tasks.push({
+            tasks.unshift({
                 name:taskName,
                 desc:taskDesc
             });
