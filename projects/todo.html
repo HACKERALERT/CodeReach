@@ -23,7 +23,7 @@
             left:0;
             width:100vw;
             height:100vh;
-            background-image:url("https://i.imgur.com/O8x8Nki.jpg");
+            background-image:url("../images/catalina.jpg");
             background-size:cover;
             background-repeat:no-repeat;
             z-index:-1;
@@ -45,8 +45,6 @@
             position:relative;
             animation:.5s taskAnim ease forwards;
             animation-fill-mode:none;
-            transform:scale(1);
-            transition:transform .2s;
         }
         @keyframes taskAnim{
             from{
@@ -56,9 +54,6 @@
                 transform:scale(1);
                 opacity:1;
             }
-        }
-        .task:hover,#add:hover{
-            transform:scale(1.01);
         }
         .task_name{
             margin:0;
@@ -70,6 +65,7 @@
             margin:0;
             margin-top:8px;
             font-size:20px;
+            word-wrap:break-word;
         }
         .task_done{
             height:28px;
@@ -93,8 +89,6 @@
             margin:16px;
             box-sizing:border-box;
             margin-left:calc((100% - max(320px,50vw)) / 2);
-            transform:scale(1);
-            transition:transform .2s;
         }
         #add input,#add textarea,#add button{
             width:100%;
@@ -110,10 +104,11 @@
             margin-bottom:4px;
         }
         #add input::placeholder,#add textarea::placeholder{
-            color:#777;
+            color:#ccc;
         }
         #add textarea{
             resize:none;
+            display:block;
         }
         #add button{
             margin:0;
@@ -124,8 +119,8 @@
 <body>
     <div id="background"></div>
     <div id="add">
-        <input type="text" placeholder="Task name" autocomplete="off"><br>
-        <textarea placeholder="Task description" rows="3"></textarea><br>
+        <input type="text" placeholder="Task name" autocomplete="off">
+        <textarea placeholder="Task description" rows="3"></textarea>
         <button>Add</button>
     </div>
     <div id="tasks">
