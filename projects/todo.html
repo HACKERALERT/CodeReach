@@ -3,8 +3,16 @@
 <head>
     <title>To-Do</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
+        @font-face{
+            font-family:"Open Sans";
+            font-style:normal;
+            font-display:swap;
+            src:url("../fonts/opensans.woff2") format("woff2");
+        }
+        *{
+            font-family:"Open Sans" !important;
+        }
         body{
             position:absolute;
             top:0;
@@ -13,9 +21,6 @@
             margin:0;
             padding:24px;
             box-sizing:border-box;
-        }
-        *{
-            font-family:"Open Sans" !important;
         }
         #background{
             position:fixed;
@@ -185,6 +190,7 @@
 
         if(window.localStorage.getItem("tasks")){
             tasks = JSON.parse(window.localStorage.getItem("tasks"));
+            tasks.reverse();
             tasks.forEach(e=>addTask(e.name,e.desc));
         }
     </script>
