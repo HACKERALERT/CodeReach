@@ -192,6 +192,7 @@
             tasks = JSON.parse(window.localStorage.getItem("tasks"));
             tasks.reverse();
             tasks.forEach(e=>addTask(e.name,e.desc));
+            tasks.reverse();
         }
     </script>
 </body>
