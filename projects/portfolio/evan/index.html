@@ -41,6 +41,13 @@
             overflow-x:hidden;
             background-color:#fefaf6;
         }
+        a{
+            filter:invert(0);
+            transition:filter .2s;
+        }
+        a:hover{
+            filter:invert(50%);
+        }
         #nav{
             position:fixed;
             top:0;
@@ -83,7 +90,8 @@
         }
         #hero{
             position:absolute;
-            top:64px;
+            top:0;
+            padding-top:64px;
             left:0;
             width:100%;
             height:calc(100% - 64px);
@@ -256,7 +264,7 @@ ffasfsdfadfadsf
         AOS.init();
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-            anchor.addEventListener("click",e=>{
+            anchor.addEventListener("click",function(e){
                 e.preventDefault();
                 document.querySelector(this.getAttribute("href")).scrollIntoView({
                     behavior:"smooth"
