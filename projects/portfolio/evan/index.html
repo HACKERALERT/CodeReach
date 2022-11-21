@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <title>About Me</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="./css/aos.min.css">
     <style>
         @font-face{
             font-family:"Bogart";
@@ -46,7 +49,7 @@
             height:64px;
             border-bottom:1px solid #232320;
             z-index:2147483647;
-            backdrop-filter:blur(2px);
+            backdrop-filter:blur(3px);
             display:flex;
             align-items:center;
             justify-content:center;
@@ -80,10 +83,10 @@
         }
         #hero{
             position:absolute;
-            top:32px;
+            top:64px;
             left:0;
             width:100%;
-            height:100%;
+            height:calc(100% - 64px);
             display:flex;
             align-items:center;
             justify-content:center;
@@ -210,9 +213,10 @@
     </style>
     <script src="./js/three.min.js"></script>
     <script src="./js/vanta.globe.min.js"></script>
+    <script src="./js/aos.min.js"></script>
 </head>
 <body>
-    <div id="nav">
+    <div id="nav" data-aos="zoom-out" data-aos-duration="800">
         <div id="links">
             <div>
                 <a href="#hero">Home</a>
@@ -226,7 +230,7 @@
             </div>
         </div>
     </div>
-    <div id="hero">
+    <div id="hero" data-aos="zoom-out" data-aos-duration="800">
         <div id="container">
             <div id="intro">
                 <p id="hi">Hi. I'm Evan.</p>
@@ -235,10 +239,12 @@
             </div>
         </div>
     </div>
-    <div id="about">
-f
+    <div id="about" data-aos="fade-up" data-aos-duration="800">
+ffasfsdfadfadsf
     </div>
     <script>
+        "use strict";
+        
         VANTA.GLOBE({
             el:"#hero",
             mouseControls:false,
@@ -246,6 +252,16 @@ f
             gyroControls:false,
             backgroundColor:0xfefaf6,
             color:0x3b64d2
+        });
+        AOS.init();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+            anchor.addEventListener("click",e=>{
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                });
+            });
         });
     </script>
 </body>
