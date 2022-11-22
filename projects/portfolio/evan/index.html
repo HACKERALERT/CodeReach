@@ -153,6 +153,24 @@
             padding:24px;
             box-sizing:border-box;
         }
+        #footer{
+            position:absolute;
+            top:calc(100vh - 64px);
+            left:calc((100% - min(80%,1080px)) / 2);
+            width:min(80%,1080px);
+            height:64px;
+            background-color:#232320;
+            color:#fefaf6;
+            border-radius:16px;
+            padding:16px;
+            box-sizing:border-box;
+        }
+        #footer p{
+            line-height:32px;
+            font-size:24px;
+            margin:0;
+            text-align:center;
+        }
         @media screen and (max-width:1080px){
             #nav a{
                 padding:20px;
@@ -194,6 +212,11 @@
             #about{
                 height:fit-content;
             }
+            #footer{
+                position:unset;
+                margin-top:64px;
+                width:100%;
+            }
         }
         @media screen and (max-width:820px){
             #nav a{
@@ -209,10 +232,13 @@
             #intro{
                 width:80%;
             }
+            #footer p{
+                font-size:20px;
+            }
         }
         @media screen and (max-width:620px){
-            #container{
-                width:calc(100% - 32px);
+            .container{
+                width:calc(100%);
             }
             #links > div:first-child{
                 display:none;
@@ -251,6 +277,9 @@
                 line-height:22px;
                 margin-top:4px;
             }
+            #footer{
+                border-radius:0;
+            }
         }
     </style>
     <script src="./js/three.min.js"></script>
@@ -263,7 +292,6 @@
             <div>
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
-                <a href="#footer">Footer</a>
             </div>
             <div id="social">
                 <a href="https://ddg.gg"><img src="./svg/instagram.svg"></a>
@@ -288,14 +316,14 @@
             </div>
             <div id="aboutme">
                 <h1>I'm homeless.</h1>
-                <p>lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem</p>
+                <p>I'm failing in Math and English. My marks are exponential decay.</p>
+                <p>I hope to go to University of Windsor.</p>
+            </div>
+            <div id="footer">
+                <p>Designed by Evan Su.</p>
             </div>
         </div>
-        <div id="footer">
-            <h1>f</h1>
-        </div>
     </div>
-    
     <script>
         "use strict";
         
