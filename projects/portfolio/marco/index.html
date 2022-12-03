@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!--========== favicon ==========-->
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!--========== box icons ==========-->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <!--========== css ==========-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <title>CodeReach Project 1: Portfolio Website</title>
+</head>
+
+<body>
+
+  <!--========== scroll top ==========-->
+  <a href="#" class="scrolltop" id="scroll-top">
+    <box-icon name='chevron-up'></box-icon>
+  </a>
+
+  <!--========== header ==========-->
+  <header class="l-header" id="header">
+    <nav class="nav bd-container">
+      <a href="#" class="nav__logo">Marco K.</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero" class="nav__link active-link">Hero</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact Me&nbsp;&nbsp;&nbsp;</a></li>
+
+          <li>
+            <box-icon name='moon' id="theme-button"></box-icon>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <box-icon name='menu'></box-icon>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--========== hero ==========-->
+    <section class="hero" id="hero">
+      <div class="hero__container bd-container bd-grid">
+        <div class="hero__data">
+          <h1 class="hero__title">Marco Kurepa</h1>
+          <h2 class="hero__subtitle">Student,<br>Developer,</br>Musician.</h2>
+          <a href="#" class="button">View Projects</a>
+        </div>
+
+        <img src="assets/img/hero.png" alt="" class="hero__img">
+      </div>
+    </section>
+
+    <!--========== about ==========-->
+    <section class="about section bd-container" id="about">
+      <div class="about__container  bd-grid">
+        <div class="about__data">
+          <span class="section-subtitle about__initial">About Me</span>
+          <h2 class="section-title about__initial">Ambition</h2>
+          <p class="about__description">I'm a 16 year old student at Vincent Massey Secondary School. Outside of school
+            hours, I'm involved with numerous clubs at Massey, and I'm a Royal Canadian Air Cadet. My most defining
+            trait is my ambition.</p>
+          <a href="#" class="button">Download Resume</a>
+        </div>
+
+        <img src="assets/img/about.jpg" alt="" class="about__img">
+      </div>
+    </section>
+
+    <!--========== testimonials ==========-->
+    <section class="testimonials section bd-container" id="testimonials">
+      <span class="section-subtitle">Testimonials</span>
+      <h2 class="section-title">Here’s What My Colleagues Think of Me</h2>
+
+      <div class="testimonials__container  bd-grid">
+        <div class="testimonials__content">
+          <h3 class="testimonials__title">Esteemed Individual</h3>
+          <p class="testimonials__description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed libero
+            felis, eleifend nec enim sed, facilisis tristique enim. Fusce dignissim convallis odio, sed egestas neque
+            fringilla ut. Maecenas sodales viverra pulvinar. Curabitur dictum mauris sit amet lacus rhoncus, ac gravida
+            nisi hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."<br> - Alice</p>
+        </div>
+
+        <div class="testimonials__content">
+          <h3 class="testimonials__title">Wise Man</h3>
+          <p class="testimonials__description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed libero
+            felis, eleifend nec enim sed, facilisis tristique enim. Fusce dignissim convallis odio, sed egestas neque
+            fringilla ut. Maecenas sodales viverra pulvinar. Curabitur dictum mauris sit amet lacus rhoncus, ac gravida
+            nisi hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."<br> - Bob</p>
+        </div>
+
+        <div class="testimonials__content">
+          <h3 class="testimonials__title">Intellectual Fellow</h3>
+          <p class="testimonials__description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed libero
+            felis, eleifend nec enim sed, facilisis tristique enim. Fusce dignissim convallis odio, sed egestas neque
+            fringilla ut. Maecenas sodales viverra pulvinar. Curabitur dictum mauris sit amet lacus rhoncus, ac gravida
+            nisi hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."<br> - Charlie</p>
+        </div>
+      </div>
+    </section>
+
+    <!--========== projects ==========-->
+    <section class="projects section bd-container" id="projects">
+      <span class="section-subtitle">check these out</span>
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="projects__container bd-grid">
+        <div class="projects__content">
+          <img src="assets/img/project1.png" alt="" class="projects__img">
+          <span class="projects__name">Project Numero Uno</span>
+          <a href="#" class="button projects__button">
+            <box-icon name='right-arrow-alt'></box-icon>
+          </a>
+        </div>
+
+        <div class="projects__content">
+          <img src="assets/img/project2.jfif" alt="" class="projects__img">
+          <span class="projects__name">Project Dos</span>
+          <a href="#" class="button projects__button">
+            <box-icon name='right-arrow-alt'></box-icon>
+          </a>
+        </div>
+
+        <div class="projects__content">
+          <img src="assets/img/project3.jpg" alt="" class="projects__img">
+          <span class="projects__name">Math ig</span>
+          <a href="#" class="button projects__button">
+            <box-icon name='right-arrow-alt'></box-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!--========== contact ==========-->
+    <section class="contact section bd-container" id="contact">
+      <div class="contact__container bd-grid">
+        <div class="contact__data">
+          <span class="section-subtitle contact__initial">Get in touch?</span>
+          <h2 class="section-title contact__initial">Contact Me</h2>
+          <p class="contact__description">Want to discuss working together? Click the button below to reach out to me!
+          </p>
+        </div>
+
+        <div class="contact__button">
+          <a href="#" class="button">Reach Out</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--========== footer ==========-->
+  <footer class="footer section bd-container">
+    <div class="footer__container bd-grid">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">Marco</a>
+        <span class="footer__description">Future Homeless Man</span>
+        <div>
+          <a href="#" class="footer__social">
+            <box-icon name='facebook-circle' type='logo'></box-icon>
+          </a>
+          <a href="#" class="footer__social">
+            <box-icon name='instagram' type='logo'></box-icon>
+          </a>
+          <a href="#" class="footer__social">
+            <box-icon name='github' type='logo'></box-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Adress</h3>
+        <ul>
+          <li>Windsor - Canada</li>
+          <li>519-969-2530</li>
+          <li>marco.n.kurepa@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2022 CodeReach. All right reserved</p>
+  </footer>
+
+  <!--========== scroll reveal ==========-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--========== main js ==========-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
